@@ -7,26 +7,22 @@ hex code.
 ## Setup and Run Instructions
 
 1.  Clone the repository
-
 ```{=html}
 ```
     git clone <repository-url>
     cd css-build-demo
 
 2.  Install dependencies
-
 ```{=html}
 ```
     npm install
 
 3.  Run the development server
-
 ```{=html}
 ```
     npm run dev
 
 4.  Build the project
-
 ```{=html}
 ```
     npm run build
