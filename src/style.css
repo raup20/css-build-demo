@@ -45,12 +45,30 @@ h1 {
   border: 2px solid #e5e7eb;
   margin-bottom: 14px;
   background: #000000;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.color-box:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  border-color: #94a3b8;
+}
+
+.color-box:active {
+  transform: scale(0.99);
+}
+
+.active-box {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.16);
 }
 
 .color-code {
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 1px;
+  color: #111827;
 }
 
 button {
@@ -67,11 +85,6 @@ button {
 button:hover {
   transform: translateY(-1px);
   opacity: 0.95;
-}
-
-#generateBtn {
-  background: #2563eb;
-  color: white;
 }
 
 #copyBtn {

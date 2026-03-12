@@ -2,7 +2,6 @@ import "./style.css";
 
 const colorBox = document.getElementById("colorBox");
 const colorCode = document.getElementById("colorCode");
-const generateBtn = document.getElementById("generateBtn");
 const copyBtn = document.getElementById("copyBtn");
 const message = document.getElementById("message");
 
@@ -17,12 +16,17 @@ function getRandomHexColor() {
 
 function setRandomColor() {
   const newColor = getRandomHexColor();
+
   colorBox.style.backgroundColor = newColor;
   colorCode.textContent = newColor;
   message.textContent = "";
+
+  colorBox.classList.remove("active-box");
+  void colorBox.offsetWidth;
+  colorBox.classList.add("active-box");
 }
 
-generateBtn.addEventListener("click", setRandomColor);
+colorBox.addEventListener("click", setRandomColor);
 
 copyBtn.addEventListener("click", async () => {
   try {
